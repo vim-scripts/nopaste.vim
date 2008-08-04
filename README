@@ -1,0 +1,8 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2328
+
+This is a simple interface to http://www.rafb.net/ which need vim's python interface as a dependency. Edit a file, then issue the command 
+:Paste 
+and it will post the whole file on rafb. The link will come in your clipboard(* and +) as default, so you can post it with Ctrl + v or middle mouse button somewhere on IRC, browsers, etc. I also have that map in my ~/.vimrc
+vnoremap <leader>paste y:call Paste('<C-R>"')<cr><cr>
+with which you can paste just a snippet from the file. Just select the block/text in VISUAL mode and hit <leader>paste this will copy the text to the site, note <leader> is \ as default in vim.
+
