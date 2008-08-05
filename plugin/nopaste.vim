@@ -1,3 +1,15 @@
+" nopaste.vim - interface to http://rafb.net/paste
+" Maintainer:   Nikola Petrov <nikolavp@gmail.com>
+" Time-stamp: <05 Aug 2008 22:46 Nikola Petrov >
+" License:	This file is placed in the public domain.
+" Dependency - +python support
+"Exit the script if the plugin was loaded or we are in compitable mode "
+"If g:loaded_nopaste is set to 0 we will not continue too"
+if (exists("g:loaded_nopaste") && g:loaded_nopaste) || &cp || !has('python')
+ finish
+endif
+"Set the global variables"
+let g:loaded_nopaste = 1
 let g:nickname = ""
 function! Paste(cword)
 python <<EOF
